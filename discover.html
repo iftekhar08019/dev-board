@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover New Page</title>
+     <!-- Daisy UI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-200 min-h-screen ">
+    <section class="max-w-[90%] mx-auto py-7">
+        <header>
+            <nav>
+                <div class="navbar bg-base-100 shadow-sm rounded-2xl">
+                    <div class="flex-1 flex p-2 items-center">
+                        <img class="mr-1" src="assets/logo.png" alt="">
+                        <h1 class="text-4xl">Dev<span class="font-bold">Board</span></h1>
+                    </div>
+                    <div class="flex gap-3">
+                        <button id="back-btn" class="bg-blue-600 text-white text-xl font-semibold px-4 py-2 rounded-sm mr-5">
+                           Back to Desk
+                          </button>
+                    </div>
+                  </div>
+            </nav>
+        </header>
+
+
+        <div class="bg-white p-6 my-5 rounded-md">
+            <h2 class="text-xl font-bold mb-3">Question-1: What are the different ways to select an element in the DOM?</h2>
+            <div class=" border-b-2 border-dashed border-slate-200"></div>
+            <div class="mt-3"> <p>By using getElementById, getElementsByClassName, getElementsByTagName, or querySelector and querySelectorAll one can select an element in the DOM</p></div>
+        </div>
+        <div class="bg-white p-6 my-5 rounded-md">
+            <h2 class="text-xl font-bold mb-3">Question-2: What is the difference between innerHTML, innerText, and textContent?</h2>
+            <div class=" border-b-2 border-dashed border-slate-200"></div>
+            <div class="mt-3"> <p>innerHTML gives you the HTML markup inside an element, innerText returns only the visible text, and textContent retrieves all text within the element</p></div>
+        </div>
+        <div class="bg-white p-6 my-5 rounded-md">
+            <h2 class="text-xl font-bold mb-3">Question-3: What is event delegation in the DOM?</h2>
+            <div class=" border-b-2 border-dashed border-slate-200"></div>
+            <div class="mt-3"> <p>Event delegation means adding one event listener to a parent element instead of multiple listeners to each child.</p></div>
+        </div>
+        <div class="bg-white p-6 my-5 rounded-md">
+            <h2 class="text-xl font-bold mb-3">Question-4: What is event bubbling in the DOM?</h2>
+            <div class=" border-b-2 border-dashed border-slate-200"></div>
+            <div class="mt-3"> <p>Event bubbling is when an event triggered on a child element also fires on its parent elements, moving upward through the DOM tree.</p></div>
+        </div>
+
+        <div class="bg-white p-6 my-5 rounded-md">
+            <h2 class="text-xl font-bold mb-3">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+            <div class=" border-b-2 border-dashed border-slate-200"></div>
+            <div class="mt-3"> <p>By using document.createElement() to create element, add it to the DOM using methods like appendChild, and remove it by calling removeChild on its parent or using the element’s remove() method.</p></div>
+        </div>
+    </section>
+
+    <script src="scripts/toggle.js"></script>
+</body>
+</html>

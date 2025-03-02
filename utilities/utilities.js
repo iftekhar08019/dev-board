@@ -13,6 +13,15 @@ function currentTime(){
                           return formattedTime;
 }
 
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    // Generate a random 6-digit hexadecimal color code
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
 function isDisabled(){
     const button1 = document.getElementById("task-btn1");
