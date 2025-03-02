@@ -6,6 +6,7 @@ completedTasks("task-btn5","task5-heading");
 completedTasks("task-btn6","task6-heading");
 
 
+// Side Section
 document.getElementById("change-bg").addEventListener("click", function() {
     const randomColor = getRandomColor();
     document.getElementById("body-bg").style.backgroundColor = randomColor;

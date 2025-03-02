@@ -33,221 +33,224 @@
             </nav>
         </header>
 
-        <!-- ChatGPT Layout -->
-        <div class="my-4">
-            <div class="flex space-x-4">
-              <!-- Main Content Area -->
-              <div class="flex-1 bg-white p-3 rounded-lg shadow-md">
-                <div class="bg-white p-6 flex items-center space-x-6 border-b-2 border-dashed border-slate-200">
+        <main>
+            <div class="my-4">
+                <div class="flex space-x-4">
+                  <!-- Main Content Area -->
+                  <div class="flex-1 bg-white p-3 rounded-lg shadow-md">
+                    <div class="bg-white p-6 flex items-center space-x-6 border-b-2 border-dashed border-slate-200">
+                      
+                      <!-- Left section: Task Assigned -->
+                      <div class="flex items-center space-x-4 bg-slate-200 p-4 rounded-lg w-1/4">
+                        <div class="bg-white p-3 rounded-full">
+                          <img src="assets/checkbox.png" alt="Checkbox Icon" class="h-8">
+                        </div>
+                        <div class="flex flex-col items-start text-left">
+                          <span class="text-gray-500 text-lg">Task Assigned</span>
+                          <span id="task-assigned" class="text-3xl font-bold text-gray-800">06</span>
+                        </div>
+                      </div>
                   
-                  <!-- Left section: Task Assigned (with bg-slate-200) -->
-                  <div class="flex items-center space-x-4 bg-slate-200 p-4 rounded-lg w-1/4">
-                    <div class="bg-white p-3 rounded-full">
-                      <img src="assets/checkbox.png" alt="Checkbox Icon" class="h-8">
-                    </div>
-                    <div class="flex flex-col items-start text-left">
-                      <span class="text-gray-500 text-lg">Task Assigned</span>
-                      <span id="task-assigned" class="text-3xl font-bold text-gray-800">06</span>
-                    </div>
-                  </div>
-              
-                  <!-- Center section: Discover Something New Today (with gradient from blue to blueish-white) -->
-                  <div id="discover-btn" class="flex items-center space-x-4 bg-gradient-to-r from-blue-500 to-[#A1C6EA] p-4 rounded-lg w-2/4 text-white">
-                    <img src="assets/board.png" alt="Board Icon" class="h-10"> <!-- Make this icon bigger -->
-                    <div class="flex flex-col items-start text-left">
-                      <span class="text-xl font-semibold">Discover Something</span>
-                      <span class="text-xl font-semibold">New Today!</span>
-                    </div>
-                  </div>
-              
-                  <!-- Right section: Date (with bg-slate-200) -->
-                  <div class="flex items-center space-x-4 bg-slate-200 p-4 rounded-lg w-1/4">
-                    <div class="bg-white p-3 rounded-full">
-                      <img src="assets/calender.png" alt="Calendar Icon" class="h-8">
-                    </div>
-                    <div class="flex flex-col items-start text-left">
-                      <span id="daySpan" class="text-gray-500 text-base"></span>
-                      <span id="dateSpan" class="text-xl font-bold text-gray-800"></span>
-                    </div>
-                  </div>
-              
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6 mx-5">
-                                    <!-- Task Cards 1-->
-                  <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
-                    <div class="mb-4">
-                      <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
-                        ShopEase
-                      </span>
-                    </div>
-                    <h2 id="task1-heading" class="text-xl font-bold text-gray-800 mb-4">
-                      Fix Mobile Button Issue
-                    </h2>
-                    <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
-                      Debug using Chrome DevTools, check for overlapping
-                    </p>
-                    <div class="flex items-end justify-between">
-                      <div class="flex flex-col">
-                        <span class="text-xs text-gray-500">Deadline</span>
-                        <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+                      <!-- Center section -->
+                      <div id="discover-btn" class="flex items-center space-x-4 bg-gradient-to-r from-blue-500 to-[#A1C6EA] p-4 rounded-lg w-2/4 text-white">
+                        <img src="assets/board.png" alt="Board Icon" class="h-10"> <!-- Make this icon bigger -->
+                        <div class="flex flex-col items-start text-left">
+                          <span class="text-xl font-semibold">Discover Something</span>
+                          <span class="text-xl font-semibold">New Today!</span>
+                        </div>
                       </div>
-                      <button id="task-btn1"
-                        class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
-                        Completed
-                      </button>
-                    </div>
-                  </div>
-
-                                    <!-- Task Cards 2-->
-                  <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
-                    <div class="mb-4">
-                      <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
-                        CloudSync
-                      </span>
-                    </div>
-                    <h2 id="task2-heading" class="text-xl font-bold text-gray-800 mb-4">
-                      Add Dark Mode
-                    </h2>
-                    <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
-                      Store the user's preference in localStorage, update CSS vari....
-                    </p>
-                    <div class="flex items-end justify-between">
-                      <div class="flex flex-col">
-                        <span class="text-xs text-gray-500">Deadline</span>
-                        <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+                  
+                      <!-- Right section: Date -->
+                      <div class="flex items-center space-x-4 bg-slate-200 p-4 rounded-lg w-1/4">
+                        <div class="bg-white p-3 rounded-full">
+                          <img src="assets/calender.png" alt="Calendar Icon" class="h-8">
+                        </div>
+                        <div class="flex flex-col items-start text-left">
+                          <span id="daySpan" class="text-gray-500 text-base"></span>
+                          <span id="dateSpan" class="text-xl font-bold text-gray-800"></span>
+                        </div>
                       </div>
-                      <button id="task-btn2"
-                        class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
-                        Completed
-                      </button>
+                  
                     </div>
-                  </div>
-                                    <!-- Task Cards 3-->
-                  <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
-                    <div class="mb-4">
-                      <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
-                        SwiftPay
-                      </span>
-                    </div>
-                    <h2 id="task3-heading" class="text-xl font-bold text-gray-800 mb-4">
-                      Optimize Home Page
-                    </h2>
-                    <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
-                      Debug using Chrome DevTools, check for overlapping
-                    </p>
-                    <div class="flex items-end justify-between">
-                      <div class="flex flex-col">
-                        <span class="text-xs text-gray-500">Deadline</span>
-                        <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+    
+                    <!-- Tasks Card container -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6 mx-5">
+                                        <!-- Task Cards 1-->
+                      <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
+                        <div class="mb-4">
+                          <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
+                            ShopEase
+                          </span>
+                        </div>
+                        <h2 id="task1-heading" class="text-xl font-bold text-gray-800 mb-4">
+                          Fix Mobile Button Issue
+                        </h2>
+                        <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
+                          Debug using Chrome DevTools, check for overlapping
+                        </p>
+                        <div class="flex items-end justify-between">
+                          <div class="flex flex-col">
+                            <span class="text-xs text-gray-500">Deadline</span>
+                            <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+                          </div>
+                          <button id="task-btn1"
+                            class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
+                            Completed
+                          </button>
+                        </div>
                       </div>
-                      <button id="task-btn3"
-                        class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
-                        Completed
-                      </button>
-                    </div>
-                  </div>
-                                    <!-- Task Cards 4-->
-                  <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
-                    <div class="mb-4">
-                      <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
-                        Meta
-                      </span>
-                    </div>
-                    <h2 id="task4-heading" class="text-xl font-bold text-gray-800 mb-4">
-                      Add new emoji 😇
-                    </h2>
-                    <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
-                      Debug using Chrome DevTools, check for overlapping
-                    </p>
-                    <div class="flex items-end justify-between">
-                      <div class="flex flex-col">
-                        <span class="text-xs text-gray-500">Deadline</span>
-                        <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+    
+                                        <!-- Task Cards 2-->
+                      <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
+                        <div class="mb-4">
+                          <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
+                            CloudSync
+                          </span>
+                        </div>
+                        <h2 id="task2-heading" class="text-xl font-bold text-gray-800 mb-4">
+                          Add Dark Mode
+                        </h2>
+                        <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
+                          Store the user's preference in localStorage, update CSS vari....
+                        </p>
+                        <div class="flex items-end justify-between">
+                          <div class="flex flex-col">
+                            <span class="text-xs text-gray-500">Deadline</span>
+                            <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+                          </div>
+                          <button id="task-btn2"
+                            class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
+                            Completed
+                          </button>
+                        </div>
                       </div>
-                      <button id="task-btn4"
-                        class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
-                        Completed
-                      </button>
-                    </div>
-                  </div>
-                                    <!-- Task Cards 5-->
-                  <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
-                    <div class="mb-4">
-                      <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
-                        Google LLC
-                      </span>
-                    </div>
-                    <h2 id="task5-heading" class="text-xl font-bold text-gray-800 mb-4">
-                      Integrate OpenAI API
-                    </h2>
-                    <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
-                      Debug using Chrome DevTools, check for overlapping
-                    </p>
-                    <div class="flex items-end justify-between">
-                      <div class="flex flex-col">
-                        <span class="text-xs text-gray-500">Deadline</span>
-                        <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+                                        <!-- Task Cards 3-->
+                      <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
+                        <div class="mb-4">
+                          <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
+                            SwiftPay
+                          </span>
+                        </div>
+                        <h2 id="task3-heading" class="text-xl font-bold text-gray-800 mb-4">
+                          Optimize Home Page
+                        </h2>
+                        <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
+                          Debug using Chrome DevTools, check for overlapping
+                        </p>
+                        <div class="flex items-end justify-between">
+                          <div class="flex flex-col">
+                            <span class="text-xs text-gray-500">Deadline</span>
+                            <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+                          </div>
+                          <button id="task-btn3"
+                            class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
+                            Completed
+                          </button>
+                        </div>
                       </div>
-                      <button id="task-btn5"
-                        class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
-                        Completed
-                      </button>
-                    </div>
-                  </div>
-
-                                    <!-- Task Cards 6-->
-                  <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
-                    <div class="mb-4">
-                      <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
-                        Glassdoor
-                      </span>
-                    </div>
-                    <h2 id="task6-heading" class="text-xl font-bold text-gray-800 mb-4">
-                      Improve job searching
-                    </h2>
-                    <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
-                      Debug using Chrome DevTools, check for overlapping
-                    </p>
-                    <div class="flex items-end justify-between">
-                      <div class="flex flex-col">
-                        <span class="text-xs text-gray-500">Deadline</span>
-                        <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+                                        <!-- Task Cards 4-->
+                      <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
+                        <div class="mb-4">
+                          <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
+                            Meta
+                          </span>
+                        </div>
+                        <h2 id="task4-heading" class="text-xl font-bold text-gray-800 mb-4">
+                          Add new emoji 😇
+                        </h2>
+                        <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
+                          Debug using Chrome DevTools, check for overlapping
+                        </p>
+                        <div class="flex items-end justify-between">
+                          <div class="flex flex-col">
+                            <span class="text-xs text-gray-500">Deadline</span>
+                            <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+                          </div>
+                          <button id="task-btn4"
+                            class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
+                            Completed
+                          </button>
+                        </div>
                       </div>
-                      <button id="task-btn6"
-                        class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
-                        Completed
-                      </button>
+                                        <!-- Task Cards 5-->
+                      <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
+                        <div class="mb-4">
+                          <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
+                            Google LLC
+                          </span>
+                        </div>
+                        <h2 id="task5-heading" class="text-xl font-bold text-gray-800 mb-4">
+                          Integrate OpenAI API
+                        </h2>
+                        <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
+                          Debug using Chrome DevTools, check for overlapping
+                        </p>
+                        <div class="flex items-end justify-between">
+                          <div class="flex flex-col">
+                            <span class="text-xs text-gray-500">Deadline</span>
+                            <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+                          </div>
+                          <button id="task-btn5"
+                            class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
+                            Completed
+                          </button>
+                        </div>
+                      </div>
+    
+                                        <!-- Task Cards 6-->
+                      <div class="bg-slate-200 p-6 rounded-lg shadow-md w-full max-w-sm">
+                        <div class="mb-4">
+                          <span class="bg-white rounded-md p-3 text-sm font-bold text-gray-600 inline-block">
+                            Glassdoor
+                          </span>
+                        </div>
+                        <h2 id="task6-heading" class="text-xl font-bold text-gray-800 mb-4">
+                          Improve job searching
+                        </h2>
+                        <p class="bg-white p-3 rounded-md text-sm text-gray-600 mb-6">
+                          Debug using Chrome DevTools, check for overlapping
+                        </p>
+                        <div class="flex items-end justify-between">
+                          <div class="flex flex-col">
+                            <span class="text-xs text-gray-500">Deadline</span>
+                            <span class="text-xs font-semibold text-gray-700">21 March 2025</span>
+                          </div>
+                          <button id="task-btn6"
+                            class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed">
+                            Completed
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-        
-              <!-- Sidebar -->
-              <div class="w-80 bg-white p-6 rounded-lg shadow-md">
-                <div class="basis-2/12 flex flex-col gap-3 items-center justify-between border-b-2 border-dashed border-slate-200 pb-3">
-                    <!-- Activity Log Title & Icon -->
-                    <div class="flex items-center space-x-2">
-                      <img src="assets/activity.png" alt="Activity Icon" class="h-6">
-                      <span class="font-semibold text-gray-700">Activity Log</span>
-                    </div>
-                    <!-- Clear History Button -->
-                    <button id="clear-btn" class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm">
-                      Clear History
-                    </button>
-                  </div>
-
-                  <!-- Task completed -->
-                   <div class="basis-10/12 overflow-auto pt-2">
-                    <div id="activity-log" class="space-y-2">
-
+            
+                  <!-- Sidebar -->
+                  <div class="w-80 bg-white p-6 rounded-lg shadow-md">
+                    <div class="basis-2/12 flex flex-col gap-3 items-center justify-between border-b-2 border-dashed border-slate-200 pb-3">
+                        <!-- Activity Log Title & Icon -->
+                        <div class="flex items-center space-x-2">
+                          <img src="assets/activity.png" alt="Activity Icon" class="h-6">
+                          <span class="font-semibold text-gray-700">Activity Log</span>
+                        </div>
+                        <!-- Clear History Button -->
+                        <button id="clear-btn" class="bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-sm">
+                          Clear History
+                        </button>
+                      </div>
+    
+                      <!-- Task completed -->
+                       <div class="basis-10/12 overflow-auto pt-2">
+                        <div id="activity-log" class="space-y-2">
+    
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        </main>
+        
     </section>
 
+    <!-- Scripts -->
     <script src="utilities/utilities.js"></script>
     <script src="scripts/toggle.js"></script>
     <script src="scripts/complete-button.js"></script>

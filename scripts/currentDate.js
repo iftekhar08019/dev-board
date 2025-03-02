@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+
     const now = new Date();
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -10,4 +10,4 @@ document.addEventListener("DOMContentLoaded", function() {
   
     document.getElementById("daySpan").textContent = dayName;
     document.getElementById("dateSpan").textContent = `${monthName} ${dayOfMonth} ${year}`;
-  });
+
